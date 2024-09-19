@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,12 +7,16 @@
 }
 
 body {
-    background-color: #f4f4f9;
+    background-color:#1c3204b7;
     color: #333;
     line-height: 1.6;
     font-size: 16px;
     padding: 0;
+   
 }
+
+
+
 
 a {
     text-decoration: none;
@@ -25,8 +29,8 @@ a:hover {
 
 /* Header */
 header {
-    background-color: #2c3e50;
-    color: white;
+    background-color: #110342;
+    color: rgb(249, 240, 240);
     padding: 20px 0;
     text-align: center;
 }
@@ -46,7 +50,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
@@ -57,9 +61,71 @@ main {
     padding: 20px;
 }
 
+/* Section styles */
+.app {
+    background-color: #ffffff66;
+    border-radius: 8px;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    transition: transform 0.3s ease;
+}
+
+.app:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading styles */
+.app h2 {
+    font-size: 1.8em;
+    color: #35404f;
+    margin-bottom: 10px;
+    border-left: 4px solid #457b9d;
+    padding-left: 10px;
+}
+
+/* for the Paragraph styles */
+.app p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+main {
+    display: flex;
+    flex-direction: column; /* Staking items vert */
+    width: 100%; /* Ensures full width */
+    padding: 20px; /* Optional padding for spacing */
+}
+
+section.app {
+    width: 100%; /* Ensures sections take full width */
+    margin-bottom: 20px; /* Adds space between sections */
+}
+
+p, h2 {
+    margin: 15px; /* Removing any default margins  */
+    padding: 0;
+}
+
+@media screen and (min-width: 600px) {
+    section.app {
+        width: 100%; /* changed based on the size of the screen */
+    }
+}
+
+/* Strong tags for definition, use cases, and examples */
+.app p strong {
+    color: #457b9d;
+    font-weight: bold;
+}
+
+/* The main article  */
 article {
     flex: 3;
-    background-color: white;
+    background-color: rgb(182, 203, 203);
     padding: 20px;
     margin-right: 20px;
     border-radius: 8px;
@@ -69,7 +135,7 @@ article {
 article header h2 {
     margin-bottom: 10px;
     font-size: 1.8em;
-    color: #333;
+    color: #f2f2f2;
 }
 
 article header h3 {
@@ -94,40 +160,31 @@ article footer img {
     border-radius: 50%;
     margin-right: 20px;
     float: left;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    transition: transform 0.10s ease;
+    
 }
+article footer img:hover{
+transform: translateY(-30px);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15)
+
+}
+
+
+
 
 article footer h2, article footer h3 {
     color: #555;
 }
 
-aside {
-    flex: 1;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
 
-aside section h4 {
-    margin-bottom: 10px;
-    font-size: 1.2em;
-}
-
-aside section nav ul {
-    list-style-type: none;
-    margin-bottom: 20px;
-}
-
-aside section nav ul li {
-    margin-bottom: 10px;
-}
-
-/* Form Styles */
+/*The form Styles */
 form {
     padding: 20px;
-    background-color: white;
+    background-color: rgb(182, 203, 203);
     border-radius: 8px;
-    margin: 20px 0;
+    margin: 20px 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -147,7 +204,7 @@ form input, form select, form textarea {
 
 form input[type="submit"] {
     width: auto;
-    background-color: #3498db;
+    background-color: #110342;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -158,9 +215,9 @@ form input[type="submit"]:hover {
     background-color: #2980b9;
 }
 
-/* Footer */
+/* Footer lower part */
 footer {
-    background-color: #2c3e50;
+    background-color: #110342;
     color: white;
     padding: 30px 0;
     text-align: center;
@@ -186,8 +243,9 @@ footer section nav ul li {
     margin-bottom: 10px;
 }
 
-/* Responsive Design */
+/* Response Design */
 @media (max-width: 768px) {
+
     main {
         flex-direction: column;
     }
@@ -208,4 +266,60 @@ footer section nav ul li {
     header h1 {
         font-size: 2em;
     }
+   
+
+
+  /* For the newletter popupp */
+
+
+        /* pop up container (hidden by default) */
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /*for the  Semi-transparent background */
+        }
+    
+        /* Modal content */
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.5s;
+        }
+    
+        /* Close button */
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+    
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+  
+
 }
+
